@@ -1,2 +1,28 @@
 @import "tailwindcss";
-:root { scroll-behavior: smooth; }
+
+/* :root { scroll-behavior: smooth; } */
+
+:root{
+--brand-1: #0f172a; /* dark navy */
+--accent: #7c3aed; /* purple */
+}
+
+
+/* subtle animated gradient background helper */
+.bg-animated-gradient{
+background: linear-gradient(120deg, rgba(124,58,237,0.12), rgba(59,130,246,0.08));
+background-size: 200% 200%;
+animation: gradientShift 8s ease infinite;
+}
+
+
+@keyframes gradientShift{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+
+/* small helper for glass */
+.glass { backdrop-filter: blur(6px); background-color: rgba(255,255,255,0.6); }
+.dark .glass { background-color: rgba(10,10,10,0.5); }
