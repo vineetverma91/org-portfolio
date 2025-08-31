@@ -1,21 +1,21 @@
 export default function Services() {
-  const services = [
-    { title: "Web Development", desc: "Full-stack React, Node.js, and MongoDB apps." },
-    { title: "UI/UX Design", desc: "Beautiful, responsive, and user-friendly interfaces." },
-    { title: "Mobile Apps", desc: "Cross-platform apps with React Native & APIs." },
-  ];
-
   return (
-    <section className="p-10 max-w-6xl mx-auto">
-      <h1 className="text-4xl font-bold mb-10 text-gray-900 text-center">Our Services</h1>
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((s, i) => (
-          <div key={i} className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition">
-            <h2 className="text-2xl font-semibold mb-3 text-teal-600">{s.title}</h2>
-            <p className="text-gray-700">{s.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="max-w-6xl mx-auto p-8">
+      <h1 className="text-4xl font-bold mb-6 text-gray-900">Our Services</h1>
+      <ul className="grid md:grid-cols-3 gap-6">
+        <li className="p-6 border rounded-xl shadow hover:shadow-lg">
+          <h2 className="text-xl font-semibold">Web Development</h2>
+          <p className="text-gray-600 mt-2">Modern, responsive websites built with React, Node.js and more.</p>
+        </li>
+        <li className="p-6 border rounded-xl shadow hover:shadow-lg">
+          <h2 className="text-xl font-semibold">Mobile Apps</h2>
+          <p className="text-gray-600 mt-2">Cross-platform apps with high performance and scalability.</p>
+        </li>
+        <li className="p-6 border rounded-xl shadow hover:shadow-lg">
+          <h2 className="text-xl font-semibold">Cloud Solutions</h2>
+          <p className="text-gray-600 mt-2">Secure cloud integrations and DevOps services.</p>
+        </li>
+      </ul>
+    </div>
   );
 }
