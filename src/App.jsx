@@ -5,18 +5,18 @@ import Services from "./pages/Services";
 import Work from "./pages/Work";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="flex flex-col min-h-screen">
         
         {/* Navbar */}
         <Navbar />
 
         {/* Pages */}
-        <div className="flex-grow pt-[120px]"> 
-          {/* pt-[120px] -> navbar ki height ke hisaab se padding */}
+        <div className="flex-grow pt-[82px] md:pt-[128px] lg:pt-[120px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -27,11 +27,7 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white p-4 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()} EKVYA Technologies. All rights reserved.
-          </p>
-        </footer>
+        <Footer />
       </div>
     </Router>
   );
