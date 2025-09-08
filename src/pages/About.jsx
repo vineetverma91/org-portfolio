@@ -5,7 +5,7 @@ export default function About() {
       {/* Left: Image Frame */}
       <div className="flex-shrink-0">
         <img
-          src="/owner.jpg"
+          src="/office-bench02.png"
           alt="Owner"
           className="w-60 h-60 object-cover rounded-2xl shadow-lg border-4 border-gray-300"
         />
